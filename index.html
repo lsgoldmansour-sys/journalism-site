@@ -272,6 +272,25 @@ Blaming Workers, Hiding Profits in Primetime Inflation Coverage
 </section>
 
 <!-- ARCHIVE (UNCHANGED ENTIRELY) -->
+
+<div style="max-width:1100px;margin:0 auto 10px auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
+  
+  <div style="color:#aaa;font-size:12px;">
+    View Mode:
+  </div>
+
+  <div>
+    <button onclick="setMode('newspaper')" style="margin-right:8px;padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
+      Newspaper
+    </button>
+
+    <button onclick="setMode('feed')" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
+      Feed
+    </button>
+  </div>
+
+</div>
+
 <section id="archive">
 <h2 style="font-family:'IBM Plex Serif';font-size:42px;">Editorial Archive</h2>
 
@@ -294,8 +313,18 @@ Luca Goldmansour is a journalist whose work spans media criticism, labor, housin
 <script>
 /* ARCHIVE LOGIC UNCHANGED */
 
+const urlParams = new URLSearchParams(window.location.search);
+
+let currentPage = parseInt(urlParams.get("page")) || 1;
+let filter = urlParams.get("category") || "All";
+let viewMode = urlParams.get("mode") || "newspaper";
+
 const PAGE_SIZE = 12;
 let currentPage = 1;
+
+const featured = [
+  "CUNY Is Investigating Student Government Leaders for Boycotting Israel"
+];
 
 const articles = [
 
@@ -347,6 +376,22 @@ const articles = [
 {t:"For CUNY, New State Budget Is Not Austerity, But Not “Transformative” Either",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/for-cuny-new-state-budget-is-not-austerity-but-not-transformative-either"},
 {t:"A Look at CCNY’s Shrinking Course Variety -- How Are Students Affected?",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/a-look-at-ccnys-shrinking-course-variety-how-are-students-affected"}
 
+function setMode(mode){
+  const params = new URLSearchParams(window.location.search);
+  params.set("mode", mode);
+  window.location.search = params.toString();
+}
+
+function updateURL(){
+  const params = new URLSearchParams(window.location.search);
+
+  params.set("page", currentPage);
+  params.set("category", filter);
+  params.set("mode", viewMode);
+
+  window.history.replaceState({}, "", `${location.pathname}?${params}`);
+}
+
 ];
 
 const cats=["All",...new Set(articles.map(a=>a.c))];
@@ -363,8 +408,7 @@ cats.forEach(x=>{
   b.onclick=()=>{
     filter = x;
     currentPage = 1;
-    document.querySelectorAll(".filter-btn").forEach(z=>z.classList.remove("active"));
-    b.classList.add("active");
+    updateURL();
     render();
   };
 
@@ -387,6 +431,9 @@ function render(){
   const pageItems = filtered.slice(start, start + PAGE_SIZE);
 
   pageItems.forEach(a => {
+    
+    const isFeatured = featured.includes(a.t);
+    
     g.innerHTML += `
       <div class="card">
         <img src="https://source.unsplash.com/400x300/?news">
@@ -430,6 +477,7 @@ function renderPagination(totalPages){
 
 function nextPage(totalPages){
   if (currentPage < totalPages) {
+    updateURL();
     currentPage++;
     render();
   }
@@ -438,6 +486,7 @@ function nextPage(totalPages){
 function prevPage(){
   if (currentPage > 1) {
     currentPage--;
+    updateURL();
     render();
   }
 }
