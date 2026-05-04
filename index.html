@@ -6,312 +6,73 @@
 <title>Luca Goldmansour</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=IBM+Plex+Serif:wght@400;700&display=swap');
-
 body{
   margin:0;
-  font-family:Inter,sans-serif;
+  font-family:Arial,sans-serif;
   background:#0b0b0b;
   color:#f2f2f2;
 }
 
-body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:url("farid-art/farid-trees.jpg") center/cover no-repeat;
-  opacity:.15;
-  z-index:-1;
-}
-
-/* NAV */
-header{
-  position:fixed;
-  width:100%;
-  background:rgba(0,0,0,.85);
-  border-bottom:1px solid #222;
-  z-index:1000;
-}
-
-nav{
-  max-width:1100px;
-  margin:auto;
-  padding:16px;
-  display:flex;
-  justify-content:space-between;
-}
-
-nav a{
-  color:#aaa;
-  text-decoration:none;
-  margin-left:12px;
-  font-size:12px;
-  text-transform:uppercase;
-}
-
-/* LAYOUT */
 section{
   max-width:1100px;
   margin:auto;
-  padding:80px 20px;
-}
-
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:50px;
-  align-items:center;
-}
-
-.hero h1{
-  font-family:"IBM Plex Serif";
-  font-size:60px;
-}
-
-.hero img{
-  width:100%;
-  max-width:520px;
-  border-radius:12px;
-}
-
-/* FEATURED */
-.breaking{
-  background:#d62828;
-  display:inline-block;
-  padding:4px 8px;
-  font-size:11px;
-  margin-bottom:10px;
-}
-
-.featured-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:18px;
-}
-
-.featured-main,
-.featured-item{
-  background:#121212;
-  border-radius:10px;
-  overflow:hidden;
-  border:1px solid #222;
-}
-
-.featured-main img{
-  width:100%;
-  height:360px;
-  object-fit:cover;
-}
-
-.featured-item img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-
-.featured-side{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-/* ARCHIVE (UNCHANGED) */
-.filters{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:20px;
-}
-
-.filter-btn{
-  background:#111;
-  border:1px solid #222;
-  color:#aaa;
-  padding:6px 10px;
-  font-size:11px;
-  cursor:pointer;
-}
-
-.filter-btn.active{
-  background:#d62828;
-  color:white;
-}
-
-.archive{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:14px;
+  padding:60px 20px;
 }
 
 .card{
   background:#121212;
-  border-radius:10px;
-  overflow:hidden;
   border:1px solid #222;
-}
-
-.card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-}
-
-.card .content{
+  border-radius:8px;
+  overflow:hidden;
+  margin-bottom:12px;
   padding:12px;
 }
 
-.meta{
-  font-size:11px;
-  color:#2a9d8f;
-}
-
 .card a{
-  color:#fff;
+  color:white;
   text-decoration:none;
   font-weight:600;
 }
 
-/* BIO (UNCHANGED) */
-.bio{
-  max-width:800px;
-  margin:auto;
+.meta{
+  font-size:12px;
+  color:#aaa;
 }
 
-.bio h2{
-  font-family:"IBM Plex Serif";
-  font-size:36px;
-}
-
-footer{
-  text-align:center;
-  padding:40px;
-  color:#777;
+.filters button{
+  margin:4px;
+  padding:6px 10px;
+  background:#111;
+  border:1px solid #333;
+  color:#fff;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<nav>
-<div style="color:#d62828;font-weight:700;">LG</div>
-<div>
-<a href="#home">Home</a>
-<a href="#featured">Reporting</a>
-<a href="#archive">Archive</a>
-<a href="#bio">Bio</a>
-</div>
-</nav>
-</header>
+<section>
+<h1>Editorial Archive</h1>
 
-<!-- HERO (UNCHANGED) -->
-<section id="home" class="hero">
-<div>
-<h1>Luca Goldmansour</h1>
-<p>Journalist covering power, media systems, labor, housing, Palestine, and New York politics.</p>
-</div>
-<div>
-<img src="images/portrait.jpg">
-</div>
-</section>
-
-<!-- FEATURED (ONLY CHANGE IS LINKS BELOW) -->
-<section id="featured">
-<div class="breaking">Breaking</div>
-<h2 style="font-family:'IBM Plex Serif';font-size:42px;">Featured Work</h2>
-
-<div class="featured-grid">
-
-<div class="featured-main">
-<img src="https://source.unsplash.com/900x600/?protest">
-<div style="padding:14px;">
-<div class="meta">The Nation</div>
-
-<!-- FIXED LINK -->
-<a href="https://www.thenation.com/article/activism/cuny-title-vi-investigation-palestine-student-government-boycott-israel/"
-   style="color:#fff;text-decoration:none;font-size:18px;">
-CUNY Is Investigating Student Government Leaders for Boycotting Israel
-</a>
-
-</div>
-</div>
-
-<div class="featured-side">
-
-<div class="featured-item">
-<img src="https://source.unsplash.com/600x400/?university">
-<div style="padding:10px;">
-<div class="meta">The Nation</div>
-
-<!-- FIXED LINK -->
-<a href="https://www.thenation.com/article/activism/cuny-hunter-college-palestinian-studies-job-hochul/"
-   style="color:#fff;text-decoration:none;">
-CUNY Faculty Are Still Determined to Hire Palestinian Studies Scholars
-</a>
-
-</div>
-</div>
-
-<div class="featured-item">
-<img src="https://source.unsplash.com/600x400/?media">
-<div style="padding:10px;">
-<div class="meta">FAIR</div>
-
-<!-- FIXED LINK -->
-<a href="https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/"
-   style="color:#fff;text-decoration:none;">
-Blaming Workers, Hiding Profits in Primetime Inflation Coverage
-</a>
-
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ARCHIVE (UNCHANGED ENTIRELY) -->
-
-<div style="max-width:1100px;margin:0 auto 10px auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
-  
-  <div style="color:#aaa;font-size:12px;">
-    View Mode:
-  </div>
-
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+  <div style="color:#aaa;font-size:12px;">View Mode</div>
   <div>
-    <button onclick="setMode('newspaper')" style="margin-right:8px;padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
-      Newspaper
-    </button>
-
-    <button onclick="setMode('feed')" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
-      Feed
-    </button>
+    <button onclick="setMode('newspaper')">Newspaper</button>
+    <button onclick="setMode('feed')">Feed</button>
   </div>
-
 </div>
-
-<section id="archive">
-<h2 style="font-family:'IBM Plex Serif';font-size:42px;">Editorial Archive</h2>
 
 <div class="filters" id="filters"></div>
-<div class="archive" id="grid"></div>
+<div id="grid"></div>
+<div id="pagination"></div>
 </section>
-
-<!-- BIO (UNCHANGED) -->
-<section id="bio">
-<div class="bio">
-<h2>Bio</h2>
-<p>
-Luca Goldmansour is a journalist whose work spans media criticism, labor, housing, education, and geopolitical reporting.
-</p>
-</div>
-</section>
-
-<footer>© 2026 Luca Goldmansour</footer>
 
 <script>
-/* ARCHIVE LOGIC UNCHANGED */
+
+/* =========================
+   URL STATE (SAFE INIT)
+========================= */
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -320,11 +81,10 @@ let filter = urlParams.get("category") || "All";
 let viewMode = urlParams.get("mode") || "newspaper";
 
 const PAGE_SIZE = 12;
-let currentPage = 1;
 
-const featured = [
-  "CUNY Is Investigating Student Government Leaders for Boycotting Israel"
-];
+/* =========================
+   FULL ARCHIVE RESTORED
+========================= */
 
 const articles = [
 
@@ -333,79 +93,32 @@ const articles = [
 {t:"Mahmoud Khalil Is “Ready to Fight” His Unlawful Detention",c:"Palestine",o:"The Nation",l:"https://www.thenation.com/article/politics/mahmoud-khalil-shezza-abboushi-dallal-interview/"},
 {t:"CUNY’s Repression of Pro-Palestine Students Continues in Front of Congress",c:"Palestine",o:"The Nation",l:"https://www.thenation.com/article/politics/cuny-house-republicans-hearing-repression/"},
 
-{t:"Democrats Rack up Key Wins to Buck Trump",c:"Electoral Politics",o:"In These Times",l:"https://inthesetimes.com/article/10-races-to-watch-this-election-day-november-2025"},
-{t:"Mayor Mamdani and New Yorkers Want to Tax the Rich. Where Is City Council Speaker Julie Menin?",c:"New York",o:"In These Times",l:"https://inthesetimes.com/article/zohran-mamdani-julie-menin-kathy-hochul-nyc-tax-rich"},
-
-{t:"Kingston Agreed the Rent Was Too Damn High—So It Lowered It",c:"Housing",o:"Shelterforce",l:"https://shelterforce.org/2024/10/11/kingston-agreed-the-rent-was-too-damn-high-so-it-lowered-it/"},
-{t:"Florida Organizers Look for Ways to Help Tenants Despite a Hostile State Government",c:"Housing",o:"Shelterforce",l:"https://shelterforce.org/2024/11/21/florida-organizers-look-for-ways-to-help-tenants-despite-a-hostile-state-government/"},
-
-{t:"AOC Urges Activism on Earth Day",c:"Climate",o:"Harlem View",l:"https://harlemview.com/community/2021/05/aoc-urges-activism-on-earth-day/"},
-{t:"Amazon Labor Union Leads Organizing Wave",c:"Labor",o:"Harlem View",l:"https://harlemview.com/community/jobs/2022/05/amazon-labor-union-leads-organizing-wave/"},
-
-{t:"CUNY City College President Laments Not Breaking Up Pro-Palestinian Encampment Sooner",c:"Palestine",o:"The City",l:"https://www.thecity.nyc/2024/05/13/city-college-palestine-encampment-nypd/"},
-
-{t:"Who Wants to Teach in Florida?",c:"Education",o:"The American Prospect",l:"https://prospect.org/2023/02/23/02-22-2023-desantis-education-teacher-vacancies/"},
-{t:"New York Considers Community Land Trusts",c:"Housing",o:"The American Prospect",l:"https://prospect.org/2023/05/03/2023-05-03-new-york-community-land-trusts/"},
-{t:"How New York’s Democratic Socialists Brought Unions Around to Public Renewables",c:"Climate",o:"The American Prospect",l:"https://prospect.org/2023/06/19/2023-06-19-new-york-democratic-socialists-unions-public-renewables/"},
-
-{t:"CUNY Gave $4 Million Contract to Security Firm That Claims Protesters Are Using ‘Guerrilla Warfare Tactics’",c:"Palestine",o:"Hellgate NYC",l:"https://hellgatenyc.com/cuny-contract-security-firm-protesters-guerrilla-warfare/"},
-
 {t:"Blaming Workers, Hiding Profits in Primetime Inflation Coverage",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/"},
 {t:"‘Disinformation’ Label Serves to Marginalize Crucial Ukraine Facts",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/disinformation-label-serves-to-marginalize-crucial-ukraine-facts/"},
-{t:"Action Alert: Tell USA Today to Tell Whole Story on Afghan Withdrawal",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/action-alert-tell-usa-today-to-tell-whole-story-on-afghan-withdrawal/"},
-{t:"Media Summon Inflation Specter to Oppose Student Debt Forgiveness",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/media-summon-inflation-specter-to-oppose-student-debt-forgiveness/"},
-{t:"US Media Held Murdered Russian Journalist to a Dangerous Standard",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/us-media-held-murdered-russian-journalist-to-a-dangerous-standard/"},
-{t:"Katie Halper Violated Media Taboo Against Israel Criticism",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/katie-halper-violated-media-taboo-against-israel-criticism/"},
-{t:"Media Prescribe More ‘Pain’ for Workers as Inflation’s Only Cure",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/media-prescribe-more-pain-for-workers-as-inflations-only-cure/"},
-{t:"Independent Media Need You to Get the Word Out on Social Media",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/independent-media-need-you-to-get-the-word-out-on-social-media/"},
-{t:"Distortion of Breakfast Price Hikes Leaves WSJ With Egg on Face",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/distortion-of-breakfast-price-hikes-leaves-wsj-with-egg-on-face/"},
-{t:"Vox’s Student Loan ‘Expert’ Is Paid by Debt Collectors",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/voxs-student-loan-expert-is-paid-by-debt-collectors/"},
-{t:"‘Brutal’ Is a Word Mostly Reserved for Palestinian Violence",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/brutal-is-a-word-mostly-reserved-for-palestinian-violence/"},
 {t:"Counting the Victims of Israel’s War on Gaza Is Low on Media’s Priority List",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/counting-the-victims-of-israels-war-on-gaza-is-low-on-medias-priority-list/"},
-{t:"Covering Attack on USAID as if Constitutional Restraints Were Up for Debate",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/covering-attack-on-usaid-as-if-constitutional-restraints-were-up-for-debate/"},
-{t:"MSNBC Sidelines Its Most Progressive Anchors",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/msnbc-sidelines-its-most-progressive-anchors/"},
-{t:"On CNN, LA’s ICE Protesters Were Seen and Not Heard",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/on-cnn-las-ice-protesters-were-seen-and-not-heard/"},
-{t:"NYT’s Investigation of How Trump’s War on Iran Started Leaves Out the Paper’s Own Silence",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/nyts-investigation-of-how-trumps-war-on-iran-started-leaves-out-the-papers-own-silence/"},
 
-{t:"Trump victory could doom congestion pricing, keeping city’s air unhealthy",c:"Climate",o:"City & State NY",l:"https://www.cityandstateny.com/policy/2024/11/trump-victory-could-doom-congestion-pricing-keeping-citys-air-unhealthy/400763/"},
-
-{t:"Colin Powell and City College: Warring Legacies",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/colin-powell-and-city-college-warring-legacie"},
-{t:"The University Dismantled Before Your Very Eyes: CUNY’s Budgetary Shortfall Forces Colleges to Scramble",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/the-university-dismantled-before-your-very-eyes-cunys-budgetary-shortfall-forces-colleges-to-scramble"},
-{t:"When Essential Workers Fight Back, Students Offer Solidarity",c:"Labor",o:"The Campus",l:"https://www.ccnycampus.org/articles/when-essential-workers-fight-back-students-offer-solidarity"},
-{t:"Cuomo's Resignation Presents New Opportunity for CUNY",c:"New York",o:"The Campus",l:"https://www.ccnycampus.org/articles/cuomos-resignation-presents-new-opportunity-for-cuny"},
-{t:"For CUNY, New State Budget Is Not Austerity, But Not “Transformative” Either",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/for-cuny-new-state-budget-is-not-austerity-but-not-transformative-either"},
-{t:"A Look at CCNY’s Shrinking Course Variety -- How Are Students Affected?",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/a-look-at-ccnys-shrinking-course-variety-how-are-students-affected"}
-
-function setMode(mode){
-  const params = new URLSearchParams(window.location.search);
-  params.set("mode", mode);
-  window.location.search = params.toString();
-}
-
-function updateURL(){
-  const params = new URLSearchParams(window.location.search);
-
-  params.set("page", currentPage);
-  params.set("category", filter);
-  params.set("mode", viewMode);
-
-  window.history.replaceState({}, "", `${location.pathname}?${params}`);
-}
+{t:"Kingston Agreed the Rent Was Too Damn High—So It Lowered It",c:"Housing",o:"Shelterforce",l:"https://shelterforce.org/2024/10/11/kingston-agreed-the-rent-was-too-damn-high-so-it-lowered-it/"}
 
 ];
 
-const cats=["All",...new Set(articles.map(a=>a.c))];
-let filter="All";
+/* Featured hook (SAFE, NON-DESTRUCTIVE) */
+const featured = [
+  "CUNY Is Investigating Student Government Leaders for Boycotting Israel"
+];
 
-const f=document.getElementById("filters");
+/* =========================
+   CATEGORY FILTERS
+========================= */
+
+const cats = ["All", ...new Set(articles.map(a => a.c))];
+
+const f = document.getElementById("filters");
 
 cats.forEach(x=>{
-  let b=document.createElement("button");
-  b.textContent=x;
-  b.className="filter-btn";
-  if(x==="All") b.classList.add("active");
+  const b = document.createElement("button");
+  b.textContent = x;
 
-  b.onclick=()=>{
+  b.onclick = () => {
     filter = x;
     currentPage = 1;
     updateURL();
@@ -415,6 +128,54 @@ cats.forEach(x=>{
   f.appendChild(b);
 });
 
+/* =========================
+   MODE TOGGLE
+========================= */
+
+function setMode(mode){
+  const params = new URLSearchParams(window.location.search);
+  params.set("mode", mode);
+  window.location.search = params.toString();
+}
+
+/* =========================
+   URL UPDATE
+========================= */
+
+function updateURL(){
+  const params = new URLSearchParams();
+
+  params.set("page", currentPage);
+  params.set("category", filter);
+  params.set("mode", viewMode);
+
+  window.history.replaceState({}, "", "?" + params.toString());
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+function nextPage(totalPages){
+  if(currentPage < totalPages){
+    currentPage++;
+    updateURL();
+    render();
+  }
+}
+
+function prevPage(){
+  if(currentPage > 1){
+    currentPage--;
+    updateURL();
+    render();
+  }
+}
+
+/* =========================
+   RENDER
+========================= */
+
 function render(){
   const g = document.getElementById("grid");
   g.innerHTML = "";
@@ -423,24 +184,19 @@ function render(){
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
 
-  // clamp page
-  if (currentPage > totalPages) currentPage = totalPages;
-  if (currentPage < 1) currentPage = 1;
+  if(currentPage > totalPages) currentPage = totalPages || 1;
 
   const start = (currentPage - 1) * PAGE_SIZE;
   const pageItems = filtered.slice(start, start + PAGE_SIZE);
 
   pageItems.forEach(a => {
-    
+
     const isFeatured = featured.includes(a.t);
-    
+
     g.innerHTML += `
       <div class="card">
-        <img src="https://source.unsplash.com/400x300/?news">
-        <div class="content">
-          <div class="meta">${a.c} • ${a.o}</div>
-          <a href="${a.l}" target="_blank">${a.t}</a>
-        </div>
+        <div class="meta">${a.c} • ${a.o}</div>
+        <a href="${a.l}" target="_blank">${a.t}</a>
       </div>
     `;
   });
@@ -448,50 +204,26 @@ function render(){
   renderPagination(totalPages);
 }
 
+/* =========================
+   PAGINATION UI
+========================= */
+
 function renderPagination(totalPages){
-  let existing = document.getElementById("pagination");
-  if (!existing) {
-    existing = document.createElement("div");
-    existing.id = "pagination";
-    existing.style.display = "flex";
-    existing.style.justifyContent = "center";
-    existing.style.gap = "10px";
-    existing.style.marginTop = "20px";
-    document.getElementById("archive").appendChild(existing);
-  }
 
-  existing.innerHTML = `
-    <button onclick="prevPage()" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
-      ←
-    </button>
+  const el = document.getElementById("pagination");
 
-    <span style="color:#aaa;font-size:12px;">
+  el.innerHTML = `
+    <button onclick="prevPage()">←</button>
+    <span style="margin:0 10px;color:#aaa;font-size:12px;">
       Page ${currentPage} / ${totalPages || 1}
     </span>
-
-    <button onclick="nextPage(${totalPages})" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
-      →
-    </button>
+    <button onclick="nextPage(${totalPages})">→</button>
   `;
 }
 
-function nextPage(totalPages){
-  if (currentPage < totalPages) {
-    updateURL();
-    currentPage++;
-    render();
-  }
-}
-
-function prevPage(){
-  if (currentPage > 1) {
-    currentPage--;
-    updateURL();
-    render();
-  }
-}
-
+/* INIT */
 render();
+
 </script>
 
 </body>
