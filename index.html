@@ -293,6 +293,10 @@ Luca Goldmansour is a journalist whose work spans media criticism, labor, housin
 
 <script>
 /* ARCHIVE LOGIC UNCHANGED */
+
+const PAGE_SIZE = 12;
+let currentPage = 1;
+
 const articles = [
 
 {t:"CUNY Is Investigating Student Government Leaders for Boycotting Israel",c:"Palestine",o:"The Nation",l:"https://www.thenation.com/article/activism/cuny-title-vi-investigation-palestine-student-government-boycott-israel/"},
@@ -357,7 +361,8 @@ cats.forEach(x=>{
   if(x==="All") b.classList.add("active");
 
   b.onclick=()=>{
-    filter=x;
+    filter = x;
+    currentPage = 1;
     document.querySelectorAll(".filter-btn").forEach(z=>z.classList.remove("active"));
     b.classList.add("active");
     render();
@@ -367,21 +372,74 @@ cats.forEach(x=>{
 });
 
 function render(){
-  const g=document.getElementById("grid");
-  g.innerHTML="";
+  const g = document.getElementById("grid");
+  g.innerHTML = "";
 
-  articles
-    .filter(a=>filter==="All"||a.c===filter)
-    .forEach(a=>{
-      g.innerHTML+=`
+  const filtered = articles.filter(a => filter === "All" || a.c === filter);
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+
+  // clamp page
+  if (currentPage > totalPages) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
+
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+  pageItems.forEach(a => {
+    g.innerHTML += `
       <div class="card">
         <img src="https://source.unsplash.com/400x300/?news">
         <div class="content">
           <div class="meta">${a.c} • ${a.o}</div>
           <a href="${a.l}" target="_blank">${a.t}</a>
         </div>
-      </div>`;
-    });
+      </div>
+    `;
+  });
+
+  renderPagination(totalPages);
+}
+
+function renderPagination(totalPages){
+  let existing = document.getElementById("pagination");
+  if (!existing) {
+    existing = document.createElement("div");
+    existing.id = "pagination";
+    existing.style.display = "flex";
+    existing.style.justifyContent = "center";
+    existing.style.gap = "10px";
+    existing.style.marginTop = "20px";
+    document.getElementById("archive").appendChild(existing);
+  }
+
+  existing.innerHTML = `
+    <button onclick="prevPage()" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
+      ←
+    </button>
+
+    <span style="color:#aaa;font-size:12px;">
+      Page ${currentPage} / ${totalPages || 1}
+    </span>
+
+    <button onclick="nextPage(${totalPages})" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;cursor:pointer;">
+      →
+    </button>
+  `;
+}
+
+function nextPage(totalPages){
+  if (currentPage < totalPages) {
+    currentPage++;
+    render();
+  }
+}
+
+function prevPage(){
+  if (currentPage > 1) {
+    currentPage--;
+    render();
+  }
 }
 
 render();
