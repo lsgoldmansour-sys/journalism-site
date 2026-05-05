@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - { label: "Publication", name: "publication", widget: "string" }
+
+      - { label: "Category", name: "category", widget: "select", options: [
+          "Palestine",
+          "Media Criticism",
+          "Housing",
+          "Labor",
+          "Education",
+          "Climate",
+          "New York",
+          "Electoral Politics"
+        ] }
+
+      - { label: "Link", name: "link", widget: "string" }
+
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+
+      - { label: "Image", name: "image", widget: "image", required: false }
