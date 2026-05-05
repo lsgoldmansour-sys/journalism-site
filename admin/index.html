@@ -8,33 +8,38 @@
 
 <body>
 
-  <!-- Netlify Identity -->
+  <!-- Netlify Identity (REQUIRED) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-  <!-- CMS -->
+  <!-- Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
   <script>
+    // CRITICAL: ensure CMS initializes Identity correctly
     if (window.netlifyIdentity) {
+
+      // When user logs in, ALWAYS force return to /admin
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+
+      // When CMS initializes, attach identity listener
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
-            window.location.href = "/admin/";
+            document.location.href = "/admin/";
           });
         }
       });
 
-      // 🔥 THIS IS THE CRITICAL FIX
-      window.netlifyIdentity.on("login", () => {
-        window.location.href = "/admin/";
-      });
-
+      // Handle recovery links (forgot password)
       window.netlifyIdentity.on("recover", () => {
-        window.location.href = "/admin/";
+        document.location.href = "/admin/";
       });
 
+      // Handle confirmation links
       window.netlifyIdentity.on("confirm", () => {
-        window.location.href = "/admin/";
+        document.location.href = "/admin/";
       });
     }
   </script>
