@@ -2,8 +2,13 @@ backend:
   name: git-gateway
   branch: main
 
+# IMPORTANT: replace this with your real Netlify site URL
+site_url: https://starlit-gaufre-c396c3.netlify.app/
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "articles"
@@ -11,6 +16,7 @@ collections:
     folder: "content/articles"
     create: true
     slug: "{{slug}}"
+    format: "json"
 
     fields:
       - { label: "Title", name: "title", widget: "string" }
