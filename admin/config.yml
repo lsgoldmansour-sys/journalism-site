@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-# IMPORTANT: replace this with your real Netlify site URL
 site_url: https://starlit-gaufre-c396c3.netlify.app/
+display_url: https://starlit-gaufre-c396c3.netlify.app/admin
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -20,9 +20,7 @@ collections:
 
     fields:
       - { label: "Title", name: "title", widget: "string" }
-
       - { label: "Publication", name: "publication", widget: "string" }
-
       - { label: "Category", name: "category", widget: "select", options: [
           "Palestine",
           "Media Criticism",
@@ -33,9 +31,6 @@ collections:
           "New York",
           "Electoral Politics"
         ] }
-
       - { label: "Link", name: "link", widget: "string" }
-
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
-
       - { label: "Image", name: "image", widget: "image", required: false }
