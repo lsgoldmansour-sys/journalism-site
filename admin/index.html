@@ -8,7 +8,7 @@
 
 <body>
 
-  <!-- Netlify Identity Widget (REQUIRED FIX) -->
+  <!-- Netlify Identity -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <!-- CMS -->
@@ -19,9 +19,22 @@
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+            window.location.href = "/admin/";
           });
         }
+      });
+
+      // 🔥 THIS IS THE CRITICAL FIX
+      window.netlifyIdentity.on("login", () => {
+        window.location.href = "/admin/";
+      });
+
+      window.netlifyIdentity.on("recover", () => {
+        window.location.href = "/admin/";
+      });
+
+      window.netlifyIdentity.on("confirm", () => {
+        window.location.href = "/admin/";
       });
     }
   </script>
