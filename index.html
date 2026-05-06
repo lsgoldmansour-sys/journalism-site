@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luca Goldmansour</title>
+<title>Luca GoldMansour</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=IBM+Plex+Serif:wght@400;700&display=swap');
@@ -188,16 +188,6 @@ footer{
   padding:40px;
   color:#777;
 }
-
-/* MODE TOGGLE */
-.mode-toggle{
-  max-width:1100px;
-  margin:auto;
-  padding:10px 0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
 </style>
 </head>
 
@@ -208,26 +198,38 @@ footer{
 <div style="color:#d62828;font-weight:700;">LG</div>
 <div>
 <a href="#home">Home</a>
-<a href="#featured">Reporting</a>
+<a href="#featured">Selected Reporting</a>
 <a href="#archive">Archive</a>
 <a href="#bio">Bio</a>
 </div>
 </nav>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
 <div>
-<h1>Luca Goldmansour</h1>
-<p>Journalist covering power, media systems, labor, housing, Palestine, and New York politics.</p>
+<h1>Luca GoldMansour</h1>
+
+<p>
+Journalist covering labor, housing, education, and political power in New York and beyond. Published in The Nation, In These Times, FAIR, Shelterforce, and others.
+</p>
 </div>
+
 <div>
 <img src="images/portrait.jpg">
 </div>
 </section>
 
+<!-- FEATURED -->
 <section id="featured">
-<div class="breaking">Breaking</div>
-<h2 style="font-family:'IBM Plex Serif';font-size:42px;">Featured Work</h2>
+
+<div class="breaking">Selected Reporting</div>
+
+<h2 style="font-family:'IBM Plex Serif';font-size:42px;">Selected Reporting</h2>
+
+<p style="max-width:700px;color:#aaa;margin-top:-10px;">
+A selection of my most representative reporting on labor, housing, education, and political conflict.
+</p>
 
 <div class="featured-grid">
 
@@ -235,21 +237,23 @@ footer{
 <img src="https://source.unsplash.com/900x600/?protest">
 <div style="padding:14px;">
 <div class="meta">The Nation</div>
-
 <a href="https://www.thenation.com/article/activism/cuny-title-vi-investigation-palestine-student-government-boycott-israel/"
-style="color:#fff;text-decoration:none;font-size:18px;">
+   style="color:#fff;text-decoration:none;font-size:18px;">
 CUNY Is Investigating Student Government Leaders for Boycotting Israel
 </a>
-
 </div>
 </div>
 
 <div class="featured-side">
+
 <div class="featured-item">
 <img src="https://source.unsplash.com/600x400/?university">
 <div style="padding:10px;">
 <div class="meta">The Nation</div>
-<a href="https://www.thenation.com/article/activism/cuny-hunter-college-palestinian-studies-job-hochul/">CUNY Faculty Are Still Determined to Hire Palestinian Studies Scholars</a>
+<a href="https://www.thenation.com/article/activism/cuny-hunter-college-palestinian-studies-job-hochul/"
+   style="color:#fff;text-decoration:none;">
+CUNY Faculty Are Still Determined to Hire Palestinian Studies Scholars
+</a>
 </div>
 </div>
 
@@ -257,201 +261,81 @@ CUNY Is Investigating Student Government Leaders for Boycotting Israel
 <img src="https://source.unsplash.com/600x400/?media">
 <div style="padding:10px;">
 <div class="meta">FAIR</div>
-<a href="https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/">Blaming Workers, Hiding Profits in Primetime Inflation Coverage</a>
-</div>
+<a href="https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/"
+   style="color:#fff;text-decoration:none;">
+Blaming Workers, Hiding Profits in Primetime Inflation Coverage
+</a>
 </div>
 </div>
 
+</div>
 </div>
 </section>
 
-<!-- MODE -->
-<div class="mode-toggle">
-<div style="color:#aaa;font-size:12px;">View Mode</div>
-<div>
-<button onclick="setMode('newspaper')" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;">Newspaper</button>
-<button onclick="setMode('feed')" style="padding:6px 10px;background:#111;border:1px solid #333;color:#fff;">Feed</button>
-</div>
-</div>
-
+<!-- ARCHIVE -->
 <section id="archive">
 <h2 style="font-family:'IBM Plex Serif';font-size:42px;">Editorial Archive</h2>
 
 <div class="filters" id="filters"></div>
 <div class="archive" id="grid"></div>
-<div id="pagination" style="text-align:center;margin-top:20px;"></div>
 </section>
 
+<!-- BIO -->
 <section id="bio">
 <div class="bio">
 <h2>Bio</h2>
-<p>Luca Goldmansour is a journalist whose work spans media criticism, labor, housing, education, and geopolitical reporting.</p>
+<p>
+Luca GoldMansour is a journalist covering labor, housing, education, and political power, with a focus on New York City and U.S. institutions. His reporting has appeared in The Nation, In These Times, FAIR, Shelterforce, and other publications.
+</p>
 </div>
 </section>
 
-<footer>© 2026 Luca Goldmansour</footer>
+<footer>© 2026 Luca GoldMansour</footer>
+
+<!-- CONTENT -->
+<script src="articles.js"></script>
 
 <script>
-
-/* =========================
-STATE (INSERTION 1)
-========================= */
-
-const urlParams = new URLSearchParams(window.location.search);
-
-let currentPage = parseInt(urlParams.get("page")) || 1;
-let filter = urlParams.get("category") || "All";
-let viewMode = urlParams.get("mode") || "newspaper";
-
-const PAGE_SIZE = 12;
-
-/* =========================
-FULL ARTICLE DATASET (INSERTED AS PROVIDED)
-========================= */
-
-const articles = [
-{t:"CUNY Is Investigating Student Government Leaders for Boycotting Israel",c:"Palestine",o:"The Nation",l:"https://www.thenation.com/article/activism/cuny-title-vi-investigation-palestine-student-government-boycott-israel/"},
-{t:"CUNY Faculty Are Still Determined to Hire Palestinian Studies Scholars",c:"Education",o:"The Nation",l:"https://www.thenation.com/article/activism/cuny-hunter-college-palestinian-studies-job-hochul/"},
-{t:"Mahmoud Khalil Is “Ready to Fight” His Unlawful Detention",c:"Palestine",o:"The Nation",l:"https://www.thenation.com/article/politics/mahmoud-khalil-shezza-abboushi-dallal-interview/"},
-{t:"CUNY’s Repression of Pro-Palestine Students Continues in Front of Congress",c:"Palestine",o:"The Nation",l:"https://www.thenation.com/article/politics/cuny-house-republicans-hearing-repression/"},
-
-{t:"Democrats Rack up Key Wins to Buck Trump",c:"Electoral Politics",o:"In These Times",l:"https://inthesetimes.com/article/10-races-to-watch-this-election-day-november-2025"},
-{t:"Mayor Mamdani and New Yorkers Want to Tax the Rich. Where Is City Council Speaker Julie Menin?",c:"New York",o:"In These Times",l:"https://inthesetimes.com/article/zohran-mamdani-julie-menin-kathy-hochul-nyc-tax-rich"},
-
-{t:"Kingston Agreed the Rent Was Too Damn High—So It Lowered It",c:"Housing",o:"Shelterforce",l:"https://shelterforce.org/2024/10/11/kingston-agreed-the-rent-was-too-damn-high-so-it-lowered-it/"},
-{t:"Florida Organizers Look for Ways to Help Tenants Despite a Hostile State Government",c:"Housing",o:"Shelterforce",l:"https://shelterforce.org/2024/11/21/florida-organizers-look-for-ways-to-help-tenants-despite-a-hostile-state-government/"},
-
-{t:"AOC Urges Activism on Earth Day",c:"Climate",o:"Harlem View",l:"https://harlemview.com/community/2021/05/aoc-urges-activism-on-earth-day/"},
-{t:"Amazon Labor Union Leads Organizing Wave",c:"Labor",o:"Harlem View",l:"https://harlemview.com/community/jobs/2022/05/amazon-labor-union-leads-organizing-wave/"},
-
-{t:"CUNY City College President Laments Not Breaking Up Pro-Palestinian Encampment Sooner",c:"Palestine",o:"The City",l:"https://www.thecity.nyc/2024/05/13/city-college-palestine-encampment-nypd/"},
-
-{t:"Who Wants to Teach in Florida?",c:"Education",o:"The American Prospect",l:"https://prospect.org/2023/02/23/02-22-2023-desantis-education-teacher-vacancies/"},
-{t:"New York Considers Community Land Trusts",c:"Housing",o:"The American Prospect",l:"https://prospect.org/2023/05/03/2023-05-03-new-york-community-land-trusts/"},
-{t:"How New York’s Democratic Socialists Brought Unions Around to Public Renewables",c:"Climate",o:"The American Prospect",l:"https://prospect.org/2023/06/19/2023-06-19-new-york-democratic-socialists-unions-public-renewables/"},
-
-{t:"CUNY Gave $4 Million Contract to Security Firm That Claims Protesters Are Using ‘Guerrilla Warfare Tactics’",c:"Palestine",o:"Hellgate NYC",l:"https://hellgatenyc.com/cuny-contract-security-firm-protesters-guerrilla-warfare/"},
-
-{t:"Blaming Workers, Hiding Profits in Primetime Inflation Coverage",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/"},
-{t:"‘Disinformation’ Label Serves to Marginalize Crucial Ukraine Facts",c:"Media Criticism",o:"FAIR",l:"https://fair.org/home/disinformation-label-serves-to-marginalize-crucial-ukraine-facts/"},
-
-{t:"Trump victory could doom congestion pricing, keeping city’s air unhealthy",c:"Climate",o:"City & State NY",l:"https://www.cityandstateny.com/policy/2024/11/trump-victory-could-doom-congestion-pricing-keeping-citys-air-unhealthy/400763/"},
-
-{t:"Colin Powell and City College: Warring Legacies",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/colin-powell-and-city-college-warring-legacie"},
-{t:"The University Dismantled Before Your Very Eyes: CUNY’s Budgetary Shortfall Forces Colleges to Scramble",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/the-university-dismantled-before-your-very-eyes-cunys-budgetary-shortfall-forces-colleges-to-scramble"},
-{t:"When Essential Workers Fight Back, Students Offer Solidarity",c:"Labor",o:"The Campus",l:"https://www.ccnycampus.org/articles/when-essential-workers-fight-back-students-offer-solidarity"},
-{t:"Cuomo's Resignation Presents New Opportunity for CUNY",c:"New York",o:"The Campus",l:"https://www.ccnycampus.org/articles/cuomos-resignation-presents-new-opportunity-for-cuny"},
-{t:"For CUNY, New State Budget Is Not Austerity, But Not “Transformative” Either",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/for-cuny-new-state-budget-is-not-austerity-but-not-transformative-either"},
-{t:"A Look at CCNY’s Shrinking Course Variety -- How Are Students Affected?",c:"Education",o:"The Campus",l:"https://www.ccnycampus.org/articles/a-look-at-ccnys-shrinking-course-variety-how-are-students-affected"}
-];
-
-/* =========================
-INSERTION 4
-========================= */
-
-function updateURL(){
-  const params = new URLSearchParams();
-
-  params.set("page", currentPage);
-  params.set("category", filter);
-  params.set("mode", viewMode);
-
-  window.history.replaceState({}, "", "?" + params.toString());
-}
-
-/* =========================
-FILTERS
-========================= */
-
 const cats = ["All", ...new Set(articles.map(a => a.c))];
+let filter = "All";
 
 const f = document.getElementById("filters");
 
-cats.forEach(x=>{
-  const b = document.createElement("button");
+cats.forEach(x => {
+  let b = document.createElement("button");
   b.textContent = x;
   b.className = "filter-btn";
+  if (x === "All") b.classList.add("active");
 
   b.onclick = () => {
     filter = x;
-    currentPage = 1;
-    updateURL();
+    document.querySelectorAll(".filter-btn").forEach(z => z.classList.remove("active"));
+    b.classList.add("active");
     render();
   };
 
   f.appendChild(b);
 });
 
-/* =========================
-INSERTION 5
-========================= */
+function render() {
+  const g = document.getElementById("grid");
+  g.innerHTML = "";
 
-function nextPage(totalPages){
-  if(currentPage < totalPages){
-    currentPage++;
-    updateURL();
-    render();
-  }
-}
-
-function prevPage(){
-  if(currentPage > 1){
-    currentPage--;
-    updateURL();
-    render();
-  }
-}
-
-/* =========================
-RENDER (PATCHED ONLY)
-========================= */
-
-function render(){
-  const g=document.getElementById("grid");
-  g.innerHTML="";
-
-  const filteredAll = articles.filter(a => filter === "All" || a.c === filter);
-
-  const totalPages = Math.ceil(filteredAll.length / PAGE_SIZE);
-
-  if(currentPage > totalPages) currentPage = totalPages || 1;
-
-  const start = (currentPage - 1) * PAGE_SIZE;
-  const pageItems = filteredAll.slice(start, start + PAGE_SIZE);
-
-  pageItems.forEach(a=>{
-    g.innerHTML+=`
-    <div class="card">
-      <img src="https://source.unsplash.com/400x300/?news">
-      <div class="content">
-        <div class="meta">${a.c} • ${a.o}</div>
-        <a href="${a.l}" target="_blank">${a.t}</a>
-      </div>
-    </div>`;
-  });
-
-  renderPagination(totalPages);
-}
-
-/* =========================
-INSERTION 9
-========================= */
-
-function renderPagination(totalPages){
-
-  let el = document.getElementById("pagination");
-
-  el.innerHTML = `
-    <button onclick="prevPage()">←</button>
-    <span style="color:#aaa;font-size:12px;margin:0 10px;">
-      Page ${currentPage} / ${totalPages || 1}
-    </span>
-    <button onclick="nextPage(${totalPages})">→</button>
-  `;
+  articles
+    .filter(a => filter === "All" || a.c === filter)
+    .forEach(a => {
+      g.innerHTML += `
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?news">
+        <div class="content">
+          <div class="meta">${a.c} • ${a.o}</div>
+          <a href="${a.l}" target="_blank">${a.t}</a>
+        </div>
+      </div>`;
+    });
 }
 
 render();
-
 </script>
 
 </body>
