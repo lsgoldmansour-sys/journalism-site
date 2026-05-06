@@ -23,7 +23,7 @@ const articles = [
   c: "Palestine, New York, Education",
   o: "The Nation",
   img: "images/featured/thenation3.jpg",
-  d: "2025-03-18"
+  d: "2025-03-08"
 },
 
 {
@@ -131,7 +131,7 @@ const articles = [
   c: "Palestine, New York",
   o: "Hell Gate",
   img: "images/archive/hellgate1.jpg",
-  d: "2025-02-06"
+  d: "2024-05-20"
 },
 
 {
