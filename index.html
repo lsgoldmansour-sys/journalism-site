@@ -198,32 +198,6 @@ footer{
   padding:40px;
   color:#777;
 }
-
-@media(max-width:900px){
-
-  .hero{
-    grid-template-columns:1fr;
-  }
-
-  .featured-grid{
-    grid-template-columns:1fr;
-  }
-
-  .featured-side{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:600px){
-
-  .featured-side{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-}
 </style>
 </head>
 
@@ -232,7 +206,6 @@ footer{
 <header>
 <nav>
 <div style="color:#d62828;font-weight:700;">LG</div>
-
 <div>
 <a href="#home">Home</a>
 <a href="#featured">Selected Reporting</a>
@@ -244,10 +217,8 @@ footer{
 
 <!-- HERO -->
 <section id="home" class="hero">
-
 <div>
 <h1>Luca GoldMansour</h1>
-
 <p>
 Journalist covering labor, housing, education, and political power in New York and beyond. Published in The Nation, In These Times, FAIR, Shelterforce, and others.
 </p>
@@ -256,7 +227,6 @@ Journalist covering labor, housing, education, and political power in New York a
 <div>
 <img src="images/portrait.jpg">
 </div>
-
 </section>
 
 <!-- FEATURED -->
@@ -264,9 +234,7 @@ Journalist covering labor, housing, education, and political power in New York a
 
 <div class="breaking">Selected Reporting</div>
 
-<h2 style="font-family:'IBM Plex Serif';font-size:42px;">
-Selected Reporting
-</h2>
+<h2 style="font-family:'IBM Plex Serif';font-size:42px;">Selected Reporting</h2>
 
 <p style="max-width:700px;color:#aaa;margin-top:-10px;">
 A selection of my most representative reporting on labor, housing, education, and political power.
@@ -274,173 +242,113 @@ A selection of my most representative reporting on labor, housing, education, an
 
 <div class="featured-grid">
 
-<!-- MAIN FEATURE -->
 <div class="featured-main">
-
 <img src="images/featured/inthesetimes2.jpg">
-
 <div style="padding:14px;">
-
 <div class="meta">In These Times</div>
-
-<a
-href="https://inthesetimes.com/article/zohran-mamdani-julie-menin-kathy-hochul-nyc-tax-rich"
-style="color:#fff;text-decoration:none;font-size:18px;"
-target="_blank"
->
+<a href="https://inthesetimes.com/article/zohran-mamdani-julie-menin-kathy-hochul-nyc-tax-rich"
+   style="color:#fff;text-decoration:none;font-size:18px;">
 Mayor Mamdani and New Yorkers Want to Tax the Rich. Where Is City Council Speaker Julie Menin?
 </a>
-
 </div>
 </div>
 
-<!-- SIDE GRID -->
 <div class="featured-side">
 
 <div class="featured-item">
-
 <img src="images/featured/thenation3.jpg">
-
 <div style="padding:10px;">
-
 <div class="meta">The Nation</div>
-
-<a
-href="https://www.thenation.com/article/politics/mahmoud-khalil-shezza-abboushi-dallal-interview/"
-style="color:#fff;text-decoration:none;font-size:13px;"
-target="_blank"
->
+<a href="https://www.thenation.com/article/politics/mahmoud-khalil-shezza-abboushi-dallal-interview/"
+   style="color:#fff;text-decoration:none;font-size:13px;">
 Mahmoud Khalil Is “Ready to Fight” His Unlawful Detention
 </a>
-
 </div>
 </div>
 
 <div class="featured-item">
-
 <img src="images/featured/fair11.jpg">
-
 <div style="padding:10px;">
-
-<div class="meta">Fairness & Accuracy In Reporting</div>
-
-<a
-href="https://fair.org/home/brutal-is-a-word-mostly-reserved-for-palestinian-violence/"
-style="color:#fff;text-decoration:none;font-size:13px;"
-target="_blank"
->
+<div class="meta">FAIR</div>
+<a href="https://fair.org/home/brutal-is-a-word-mostly-reserved-for-palestinian-violence/"
+   style="color:#fff;text-decoration:none;font-size:13px;">
 ‘Brutal’ Is a Word Mostly Reserved for Palestinian Violence
 </a>
-
 </div>
 </div>
 
 <div class="featured-item">
-
 <img src="images/featured/shelterforce1.jpg">
-
 <div style="padding:10px;">
-
 <div class="meta">Shelterforce</div>
-
-<a
-href="https://shelterforce.org/2024/10/11/kingston-agreed-the-rent-was-too-damn-high-so-it-lowered-it/"
-style="color:#fff;text-decoration:none;font-size:13px;"
-target="_blank"
->
+<a href="https://shelterforce.org/2024/10/11/kingston-agreed-the-rent-was-too-damn-high-so-it-lowered-it/"
+   style="color:#fff;text-decoration:none;font-size:13px;">
 Kingston Agreed the Rent Was Too Damn High—So It Lowered It
 </a>
-
 </div>
 </div>
 
 <div class="featured-item">
-
 <img src="images/featured/thecity1.jpg">
-
 <div style="padding:10px;">
-
 <div class="meta">The City</div>
-
-<a
-href="https://www.thecity.nyc/2024/05/13/city-college-palestine-encampment-nypd/"
-style="color:#fff;text-decoration:none;font-size:13px;"
-target="_blank"
->
+<a href="https://www.thecity.nyc/2024/05/13/city-college-palestine-encampment-nypd/"
+   style="color:#fff;text-decoration:none;font-size:13px;">
 CUNY City College President Laments Not Breaking Up Pro-Palestinian Encampment Sooner
 </a>
-
 </div>
 </div>
 
 </div>
 </div>
-
 </section>
 
 <!-- ARCHIVE -->
 <section id="archive">
-
-<h2 style="font-family:'IBM Plex Serif';font-size:42px;">
-Editorial Archive
-</h2>
-
+<h2 style="font-family:'IBM Plex Serif';font-size:42px;">Editorial Archive</h2>
 <div class="filters" id="filters"></div>
-
 <div class="archive" id="grid"></div>
-
 </section>
 
 <!-- BIO -->
 <section id="bio">
-
 <div class="bio">
-
 <h2>Bio</h2>
-
 <p>
 Luca GoldMansour is a journalist covering labor, housing, education, and political power, with a focus on New York City and U.S. institutions. His reporting has appeared in The Nation, In These Times, FAIR, Shelterforce, and other publications.
 </p>
-
 </div>
-
 </section>
 
-<footer>
-© 2026 Luca GoldMansour
-</footer>
+<footer>© 2026 Luca GoldMansour</footer>
 
 <script src="articles.js"></script>
 
 <script>
-const cats = ["All", ...new Set(articles.map(a => a.c))];
+const cats = [
+  "All",
+  ...new Set(
+    articles.flatMap(a =>
+      a.c.split(",").map(x => x.trim())
+    )
+  )
+];
 
 let filter = "All";
 
 const f = document.getElementById("filters");
 
 cats.forEach(x => {
-
   let b = document.createElement("button");
-
   b.textContent = x;
-
   b.className = "filter-btn";
-
-  if(x === "All"){
-    b.classList.add("active");
-  }
+  if (x === "All") b.classList.add("active");
 
   b.onclick = () => {
-
     filter = x;
-
-    document
-      .querySelectorAll(".filter-btn")
+    document.querySelectorAll(".filter-btn")
       .forEach(z => z.classList.remove("active"));
-
     b.classList.add("active");
-
     render();
   };
 
@@ -448,34 +356,25 @@ cats.forEach(x => {
 });
 
 function render(){
-
   const g = document.getElementById("grid");
-
   g.innerHTML = "";
 
   articles
-    .filter(a => filter === "All" || a.c === filter)
+    .filter(a =>
+      filter === "All" ||
+      a.c.split(",").map(x => x.trim()).includes(filter)
+    )
+    .sort((a, b) => new Date(b.d) - new Date(a.d))
     .forEach(a => {
 
       g.innerHTML += `
       <div class="card">
-
         <img src="${a.img}" alt="${a.t}">
-
         <div class="content">
-
-          <div class="meta">
-            ${a.c} • ${a.o}
-          </div>
-
-          <a href="${a.l}" target="_blank">
-            ${a.t}
-          </a>
-
+          <div class="meta">${a.c} • ${a.o}</div>
+          <a href="${a.l}" target="_blank">${a.t}</a>
         </div>
-
-      </div>
-      `;
+      </div>`;
     });
 }
 
