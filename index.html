@@ -90,8 +90,8 @@ section{
   gap:18px;
 }
 
-.featured-main,
-.featured-item{
+/* MAIN STORY */
+.featured-main{
   background:#121212;
   border-radius:10px;
   overflow:hidden;
@@ -104,16 +104,27 @@ section{
   object-fit:cover;
 }
 
-.featured-item img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
+/* 🔥 NEW: 2x2 GRID FOR SECONDARY STORIES */
+.featured-side{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
-.featured-side{
+/* SMALL FEATURED CARDS */
+.featured-item{
+  background:#121212;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #222;
   display:flex;
   flex-direction:column;
-  gap:12px;
+}
+
+.featured-item img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
 }
 
 /* ARCHIVE */
@@ -138,14 +149,12 @@ section{
   color:white;
 }
 
-/* THIS IS THE KEY FIX (GRID RESTORED) */
 .archive{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:14px;
 }
 
-/* CARD STRUCTURE RESTORED (clip-art area depends on this) */
 .card{
   background:#121212;
   border-radius:10px;
@@ -223,7 +232,7 @@ Journalist covering labor, housing, education, and political power in New York a
 </div>
 </section>
 
-<!-- FEATURED (RESTORED STRUCTURE + YOUR ORDER) -->
+<!-- FEATURED (REFINED LAYOUT FOR 5 ITEMS) -->
 <section id="featured">
 
 <div class="breaking">Selected Reporting</div>
@@ -236,7 +245,7 @@ A selection of my most representative reporting on labor, housing, education, an
 
 <div class="featured-grid">
 
-<!-- 1 -->
+<!-- MAIN (1) -->
 <div class="featured-main">
 <img src="https://source.unsplash.com/900x600/?new-york">
 <div style="padding:14px;">
@@ -248,52 +257,48 @@ Mayor Mamdani and New Yorkers Want to Tax the Rich. Where Is City Council Speake
 </div>
 </div>
 
-<!-- SIDE STACK -->
+<!-- SECONDARY GRID (4 items nicely balanced) -->
 <div class="featured-side">
 
-<!-- 2 -->
 <div class="featured-item">
 <img src="https://source.unsplash.com/600x400/?politics">
 <div style="padding:10px;">
 <div class="meta">The Nation</div>
 <a href="https://www.thenation.com/article/politics/mahmoud-khalil-shezza-abboushi-dallal-interview/"
-   style="color:#fff;text-decoration:none;">
+   style="color:#fff;text-decoration:none;font-size:13px;">
 Mahmoud Khalil Is “Ready to Fight” His Unlawful Detention
 </a>
 </div>
 </div>
 
-<!-- 3 -->
 <div class="featured-item">
 <img src="https://source.unsplash.com/600x400/?labor">
 <div style="padding:10px;">
 <div class="meta">FAIR</div>
 <a href="https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/"
-   style="color:#fff;text-decoration:none;">
+   style="color:#fff;text-decoration:none;font-size:13px;">
 Blaming Workers, Hiding Profits in Primetime Inflation Coverage
 </a>
 </div>
 </div>
 
-<!-- 4 -->
 <div class="featured-item">
 <img src="https://source.unsplash.com/600x400/?housing">
 <div style="padding:10px;">
 <div class="meta">Shelterforce</div>
 <a href="https://shelterforce.org/2024/10/11/kingston-agreed-the-rent-was-too-damn-high-so-it-lowered-it/"
-   style="color:#fff;text-decoration:none;">
+   style="color:#fff;text-decoration:none;font-size:13px;">
 Kingston Agreed the Rent Was Too Damn High—So It Lowered It
 </a>
 </div>
 </div>
 
-<!-- 5 -->
 <div class="featured-item">
 <img src="https://source.unsplash.com/600x400/?university">
 <div style="padding:10px;">
 <div class="meta">The Nation</div>
 <a href="https://www.thenation.com/article/politics/cuny-house-republicans-hearing-repression/"
-   style="color:#fff;text-decoration:none;">
+   style="color:#fff;text-decoration:none;font-size:13px;">
 CUNY’s Repression of Pro-Palestine Students Continues in Front of Congress
 </a>
 </div>
@@ -303,17 +308,14 @@ CUNY’s Repression of Pro-Palestine Students Continues in Front of Congress
 </div>
 </section>
 
-<!-- ARCHIVE (FULLY RESTORED GRID BEHAVIOR) -->
+<!-- ARCHIVE (UNCHANGED) -->
 <section id="archive">
-
 <h2 style="font-family:'IBM Plex Serif';font-size:42px;">Editorial Archive</h2>
-
 <div class="filters" id="filters"></div>
 <div class="archive" id="grid"></div>
-
 </section>
 
-<!-- BIO -->
+<!-- BIO (UNCHANGED) -->
 <section id="bio">
 <div class="bio">
 <h2>Bio</h2>
