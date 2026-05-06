@@ -8,36 +8,34 @@
 
 <body>
 
-  <!-- Netlify Identity Widget (must load first) -->
+  <!-- Identity MUST load first -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <!-- Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
   <script>
-    // Ensure Identity is available
     if (window.netlifyIdentity) {
 
-      // Initialize Identity
+      // Ensure CMS session rehydrates correctly
       window.netlifyIdentity.on("init", user => {
-        // If user logs in from email link or modal
         if (!user) {
           window.netlifyIdentity.on("login", () => {
-            // Always return to admin after login
-            document.location.href = "/admin/";
+            window.location.href = "/admin/";
           });
         }
       });
 
-      // Handle login event (covers email + password + magic link)
+      // Force correct return path after login
       window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
+        window.location.href = "/admin/";
       });
 
-      // Handle logout cleanly
+      // Safety fallback for logout
       window.netlifyIdentity.on("logout", () => {
-        document.location.href = "/";
+        window.location.href = "/";
       });
+
     }
   </script>
 

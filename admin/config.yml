@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-site_url: https://YOUR-SITE.netlify.app
-display_url: https://YOUR-SITE.netlify.app/admin
+site_url: https://starlit-gaufre-c396c3.netlify.app
+display_url: https://starlit-gaufre-c396c3.netlify.app/admin
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -13,7 +13,10 @@ collections:
     label: "Articles"
     folder: "content/articles"
     create: true
+    slug: "{{slug}}"
 
     fields:
       - { label: "Title", name: "title", widget: "string" }
-
+      - { label: "Publication", name: "publication", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Link", name: "link", widget: "string" }
