@@ -8,36 +8,8 @@
 
 <body>
 
-  <!-- Identity MUST load first -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <!-- Netlify CMS -->
+  <!-- GitHub-based Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-
-  <script>
-    if (window.netlifyIdentity) {
-
-      // Ensure CMS session rehydrates correctly
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            window.location.href = "/admin/";
-          });
-        }
-      });
-
-      // Force correct return path after login
-      window.netlifyIdentity.on("login", () => {
-        window.location.href = "/admin/";
-      });
-
-      // Safety fallback for logout
-      window.netlifyIdentity.on("logout", () => {
-        window.location.href = "/";
-      });
-
-    }
-  </script>
 
 </body>
 </html>
