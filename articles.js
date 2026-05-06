@@ -74,7 +74,7 @@ const articles = [
 {
   t: "AOC Urges Activism on Earth Day",
   l: "https://harlemview.com/community/2021/05/aoc-urges-activism-on-earth-day/",
-  c: "Climate, New York",
+  c: "Climate, New York, Video",
   o: "Harlem View",
   img: "images/archive/harlem1.jpg",
   d: "2021-05-01"
@@ -83,7 +83,7 @@ const articles = [
 {
   t: "Amazon Labor Union Leads Organizing Wave",
   l: "https://harlemview.com/community/jobs/2022/05/amazon-labor-union-leads-organizing-wave/",
-  c: "New York, Labor",
+  c: "New York, Labor, Video",
   o: "Harlem View",
   img: "images/archive/harlem2.jpg",
   d: "2022-05-02"
@@ -138,7 +138,7 @@ const articles = [
   t: "Blaming Workers, Hiding Profits in Primetime Inflation Coverage",
   l: "https://fair.org/home/blaming-workers-hiding-profits-in-primetime-inflation-coverage/",
   c: "Media Criticism, Labor, Economics",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair1.jpg",
   d: "2022-11-22"
 },
@@ -147,7 +147,7 @@ const articles = [
   t: "‘Disinformation’ Label Serves to Marginalize Crucial Ukraine Facts",
   l: "https://fair.org/home/disinformation-label-serves-to-marginalize-crucial-ukraine-facts/",
   c: "Media Criticism, War & Peace",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair2.jpg",
   d: "2022-09-29"
 },
@@ -156,7 +156,7 @@ const articles = [
   t: "Action Alert: Tell USA Today to Tell Whole Story on Afghan Withdrawal",
   l: "https://fair.org/home/action-alert-tell-usa-today-to-tell-whole-story-on-afghan-withdrawal/",
   c: "Media Criticism, War & Peace",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair3.jpg",
   d: "2021-09-03"
 },
@@ -164,8 +164,8 @@ const articles = [
 {
   t: "Media Summon Inflation Specter to Oppose Student Debt Forgiveness",
   l: "https://fair.org/home/media-summon-inflation-specter-to-oppose-student-debt-forgiveness/",
-  c: "Media Criticism, Economics",
-  o: "FAIR",
+  c: "Media Criticism, Economics, Education",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair4.jpg",
   d: "2022-09-06"
 },
@@ -174,7 +174,7 @@ const articles = [
   t: "US Media Held Murdered Russian Journalist to a Dangerous Standard",
   l: "https://fair.org/home/us-media-held-murdered-russian-journalist-to-a-dangerous-standard/",
   c: "Media Criticism, War & Peace",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair5.jpg",
   d: "2023-04-06"
 },
@@ -183,7 +183,7 @@ const articles = [
   t: "Katie Halper Violated Media Taboo Against Israel Criticism",
   l: "https://fair.org/home/katie-halper-violated-media-taboo-against-israel-criticism/",
   c: "Media Criticism, Palestine",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair6.jpg",
   d: "2022-12-09"
 },
@@ -192,7 +192,7 @@ const articles = [
   t: "Media Prescribe More ‘Pain’ for Workers as Inflation’s Only Cure",
   l: "https://fair.org/home/media-prescribe-more-pain-for-workers-as-inflations-only-cure/",
   c: "Media Criticism, Economics",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair7.jpg",
   d: "2022-10-28"
 },
@@ -201,7 +201,7 @@ const articles = [
   t: "Independent Media Need You to Get the Word Out on Social Media",
   l: "https://fair.org/home/independent-media-need-you-to-get-the-word-out-on-social-media/",
   c: "Media Criticism",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair8.jpg",
   d: "2023-02-21"
 },
@@ -210,7 +210,7 @@ const articles = [
   t: "Distortion of Breakfast Price Hikes Leaves WSJ With Egg on Face",
   l: "https://fair.org/home/distortion-of-breakfast-price-hikes-leaves-wsj-with-egg-on-face/",
   c: "Media Criticism, Economics",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair9.jpg",
   d: "2023-02-10"
 },
@@ -218,8 +218,8 @@ const articles = [
 {
   t: "Vox’s Student Loan ‘Expert’ Is Paid by Debt Collectors",
   l: "https://fair.org/home/voxs-student-loan-expert-is-paid-by-debt-collectors/",
-  c: "Media Criticism, Economics",
-  o: "FAIR",
+  c: "Media Criticism, Economics, Education",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair10.jpg",
   d: "2023-07-18"
 },
@@ -227,8 +227,8 @@ const articles = [
 {
   t: "‘Brutal’ Is a Word Mostly Reserved for Palestinian Violence",
   l: "https://fair.org/home/brutal-is-a-word-mostly-reserved-for-palestinian-violence/",
-  c: "Media Criticism, Palestine",
-  o: "FAIR",
+  c: "Media Criticism, Palestine, Quantitative Study",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/featured/fair11.jpg",
   d: "2024-04-17"
 },
@@ -237,7 +237,7 @@ const articles = [
   t: "Counting the Victims of Israel’s War on Gaza Is Low on Media’s Priority List",
   l: "https://fair.org/home/counting-the-victims-of-israels-war-on-gaza-is-low-on-medias-priority-list/",
   c: "Media Criticism, Palestine",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair12.jpg",
   d: "2024-02-06"
 },
@@ -246,7 +246,7 @@ const articles = [
   t: "Covering Attack on USAID as if Constitutional Restraints Were Up for Debate",
   l: "https://fair.org/home/covering-attack-on-usaid-as-if-constitutional-restraints-were-up-for-debate/",
   c: "Media Criticism, GOP",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair13.jpg",
   d: "2025-02-13"
 },
@@ -255,7 +255,7 @@ const articles = [
   t: "MSNBC Sidelines Its Most Progressive Anchors",
   l: "https://fair.org/home/msnbc-sidelines-its-most-progressive-anchors/",
   c: "Media Criticism",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair14.jpg",
   d: "2025-02-26"
 },
@@ -264,7 +264,7 @@ const articles = [
   t: "On CNN, LA’s ICE Protesters Were Seen and Not Heard",
   l: "https://fair.org/home/on-cnn-las-ice-protesters-were-seen-and-not-heard/",
   c: "Media Criticism, GOP",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair15.jpg",
   d: "2025-06-17"
 },
@@ -273,7 +273,7 @@ const articles = [
   t: "NYT’s Investigation of How Trump’s War on Iran Started Leaves Out the Paper’s Own Silence",
   l: "https://fair.org/home/nyts-investigation-of-how-trumps-war-on-iran-started-leaves-out-the-papers-own-silence/",
   c: "Media Criticism, War & Peace",
-  o: "FAIR",
+  o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair16.jpg",
   d: "2025-06-30"
 },
