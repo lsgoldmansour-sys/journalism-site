@@ -8,38 +8,35 @@
 
 <body>
 
-  <!-- Netlify Identity (REQUIRED) -->
+  <!-- Netlify Identity Widget (must load first) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <!-- Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
   <script>
-    // CRITICAL: ensure CMS initializes Identity correctly
+    // Ensure Identity is available
     if (window.netlifyIdentity) {
 
-      // When user logs in, ALWAYS force return to /admin
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-
-      // When CMS initializes, attach identity listener
+      // Initialize Identity
       window.netlifyIdentity.on("init", user => {
+        // If user logs in from email link or modal
         if (!user) {
           window.netlifyIdentity.on("login", () => {
+            // Always return to admin after login
             document.location.href = "/admin/";
           });
         }
       });
 
-      // Handle recovery links (forgot password)
-      window.netlifyIdentity.on("recover", () => {
+      // Handle login event (covers email + password + magic link)
+      window.netlifyIdentity.on("login", () => {
         document.location.href = "/admin/";
       });
 
-      // Handle confirmation links
-      window.netlifyIdentity.on("confirm", () => {
-        document.location.href = "/admin/";
+      // Handle logout cleanly
+      window.netlifyIdentity.on("logout", () => {
+        document.location.href = "/";
       });
     }
   </script>
