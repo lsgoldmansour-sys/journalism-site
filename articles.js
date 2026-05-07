@@ -5,7 +5,7 @@ const articles = [
   c: "Palestine, New York, Education",
   o: "The Nation",
   img: "images/archive/thenation1.jpg",
-  d: "2024-12-11"
+  d: "2025-02-13"
 },
 
 {
@@ -14,7 +14,7 @@ const articles = [
   c: "Palestine, New York, Education",
   o: "The Nation",
   img: "images/archive/thenation2.jpg",
-  d: "2025-01-08"
+  d: "2025-03-05"
 },
 
 {
@@ -23,7 +23,7 @@ const articles = [
   c: "Palestine, New York, Education",
   o: "The Nation",
   img: "images/featured/thenation3.jpg",
-  d: "2025-03-08"
+  d: "2025-03-18"
 },
 
 {
@@ -32,7 +32,7 @@ const articles = [
   c: "Palestine, New York, Education",
   o: "The Nation",
   img: "images/archive/thenation4.jpg",
-  d: "2024-07-11"
+  d: "2025-07-21"
 },
 
 {
@@ -50,7 +50,7 @@ const articles = [
   c: "New York",
   o: "In These Times",
   img: "images/featured/inthesetimes2.jpg",
-  d: "2025-07-30"
+  d: "2026-03-26"
 },
 
 {
@@ -77,7 +77,7 @@ const articles = [
   c: "Climate, New York, Video",
   o: "Harlem View",
   img: "images/archive/harlem1.jpg",
-  d: "2021-05-01"
+  d: "2021-05-20"
 },
 
 {
@@ -86,7 +86,7 @@ const articles = [
   c: "New York, Labor, Video",
   o: "Harlem View",
   img: "images/archive/harlem2.jpg",
-  d: "2022-05-02"
+  d: "2022-05-27"
 },
 
 {
@@ -140,7 +140,7 @@ const articles = [
   c: "Media Criticism, Labor, Economics",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair1.jpg",
-  d: "2022-11-22"
+  d: "2022-04-21"
 },
 
 {
@@ -149,7 +149,7 @@ const articles = [
   c: "Media Criticism, War & Peace",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair2.jpg",
-  d: "2022-09-29"
+  d: "2022-05-18"
 },
 
 {
@@ -158,7 +158,7 @@ const articles = [
   c: "Media Criticism, War & Peace",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair3.jpg",
-  d: "2021-09-03"
+  d: "2022-08-19"
 },
 
 {
@@ -167,7 +167,7 @@ const articles = [
   c: "Media Criticism, Economics, Education",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair4.jpg",
-  d: "2022-09-06"
+  d: "2022-09-09"
 },
 
 {
@@ -176,7 +176,7 @@ const articles = [
   c: "Media Criticism, War & Peace",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair5.jpg",
-  d: "2023-04-06"
+  d: "2023-09-23"
 },
 
 {
@@ -185,7 +185,7 @@ const articles = [
   c: "Media Criticism, Palestine",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair6.jpg",
-  d: "2022-12-09"
+  d: "2022-10-07"
 },
 
 {
@@ -194,7 +194,7 @@ const articles = [
   c: "Media Criticism, Economics",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair7.jpg",
-  d: "2022-10-28"
+  d: "2022-12-19"
 },
 
 {
@@ -203,7 +203,7 @@ const articles = [
   c: "Media Criticism",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair8.jpg",
-  d: "2023-02-21"
+  d: "2023-02-01"
 },
 
 {
@@ -212,7 +212,7 @@ const articles = [
   c: "Media Criticism, Economics",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair9.jpg",
-  d: "2023-02-10"
+  d: "2023-02-21"
 },
 
 {
@@ -221,7 +221,7 @@ const articles = [
   c: "Media Criticism, Economics, Education",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair10.jpg",
-  d: "2023-07-18"
+  d: "2023-08-11"
 },
 
 {
@@ -239,7 +239,7 @@ const articles = [
   c: "Media Criticism, Palestine",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair12.jpg",
-  d: "2024-02-06"
+  d: "2025-02-05"
 },
 
 {
@@ -248,7 +248,7 @@ const articles = [
   c: "Media Criticism, GOP",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair13.jpg",
-  d: "2025-02-13"
+  d: "2025-02-21"
 },
 
 {
@@ -257,7 +257,7 @@ const articles = [
   c: "Media Criticism",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair14.jpg",
-  d: "2025-02-26"
+  d: "2025-03-06"
 },
 
 {
@@ -266,7 +266,7 @@ const articles = [
   c: "Media Criticism, GOP",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair15.jpg",
-  d: "2025-06-17"
+  d: "2025-07-11"
 },
 
 {
@@ -275,7 +275,7 @@ const articles = [
   c: "Media Criticism, War & Peace",
   o: "Fairness & Accuracy In Reporting",
   img: "images/archive/fair16.jpg",
-  d: "2025-06-30"
+  d: "2026-04-17"
 },
 
 {
@@ -284,7 +284,7 @@ const articles = [
   c: "New York, Climate",
   o: "City & State",
   img: "images/archive/cityandstate1.jpg",
-  d: "2024-11-06"
+  d: "2024-11-01"
 },
 
 {
@@ -293,7 +293,7 @@ const articles = [
   c: "New York, Education, War & Peace",
   o: "The Campus",
   img: "images/archive/campus1.jpg",
-  d: "2021-10-27"
+  d: "2021-11-21"
 },
 
 {
@@ -302,7 +302,7 @@ const articles = [
   c: "New York, Education",
   o: "The Campus",
   img: "images/archive/campus2.jpg",
-  d: "2020-10-29"
+  d: "2021-01-11"
 },
 
 {
@@ -311,7 +311,7 @@ const articles = [
   c: "New York, Labor, Education",
   o: "The Campus",
   img: "images/archive/campus3.jpg",
-  d: "2021-04-22"
+  d: "2021-03-03"
 },
 
 {
@@ -320,7 +320,7 @@ const articles = [
   c: "Education, New York",
   o: "The Campus",
   img: "images/archive/campus4.jpg",
-  d: "2021-08-11"
+  d: "2021-09-27"
 },
 
 {
@@ -329,7 +329,7 @@ const articles = [
   c: "Education, New York",
   o: "The Campus",
   img: "images/archive/campus5.jpg",
-  d: "2022-04-18"
+  d: "2022-04-19"
 },
 
 {
@@ -338,6 +338,6 @@ const articles = [
   c: "Education, New York",
   o: "The Campus",
   img: "images/archive/campus6.jpg",
-  d: "2022-03-10"
+  d: "2022-10-21"
 }
 ];
